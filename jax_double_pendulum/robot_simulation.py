@@ -261,6 +261,8 @@ def simulation_iteration(
     tau_fb = ctrl_fb(th, th_d, th_des, th_d_des)
     tau = tau_ext + tau_ff + tau_fb
 
+    print('-----', tau)
+
     # evaluate the dynamics
     th_next, th_d_next, th_dd = discrete_forward_dynamics_fn(dt, th, th_d, tau)
 
