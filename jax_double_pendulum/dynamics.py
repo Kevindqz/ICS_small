@@ -64,6 +64,7 @@ def continuous_forward_dynamics(
     th: jnp.ndarray,
     th_d: jnp.ndarray,
     tau: jnp.ndarray = jnp.zeros((2,)),
+    *args_dynamics,
 ) -> jnp.ndarray:
     """
     Compute the continuous forward dynamics of the system
